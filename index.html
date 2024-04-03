@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>V-Wishes</title>
+    <style type="text/css">
+        body {
+            height: 50%;
+            margin-top: 20px;
+            background-color: violet;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .card {
+            position: relative;
+            width: 500px;
+            height: 709px;
+            border: 10px solid #9612eb;
+            margin: 60px auto 0 auto;
+            box-shadow: inset 10px 0px 15px 0px rgba(0, 0, 0, 0.1);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: #fcbbf9;
+        }
+
+        .card .text-container {
+            width: 80%;
+            height: 80%;
+            margin: auto;
+        }
+
+        .strikethrough {
+            text-decoration: line-through;
+        }
+
+        .card .text-container #head {
+            font-family: 'Nobile', sans-serif;
+            font-size: 1.5em;
+            margin: 60px auto 60px auto;
+            font-weight: bold;
+            text-align: center;
+            font-style: italic;
+            font-size: 50px;
+        }
+
+        .card p {
+            font-size: 1.1em;
+            line-height: 1.4;
+            font-family: 'Nobile';
+            color: #460505;
+            font-style: italic;
+            text-align: center;
+            margin: 50px auto 0px auto;
+        }
+
+        .card .front {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            margin: -10px 0px 0px -10px;
+            border: 10px solid #9612eb;
+            backface-visibility: hidden;
+            background-color: #9612eb;
+            background-size: contain;
+            transform-style: preserve-3d;
+            transform-origin: 0% 50%;
+            transform: perspective(800px) rotateY(0deg);
+            transition: all 0.8s ease-in-out;
+        }
+
+        .card:hover .front {
+            transform: perspective(800px) rotateY(-170deg);
+            background-color: #9612eb;
+        }
+
+        .card:hover .back {
+            transform: perspective(800px) rotateY(-170deg);
+            box-shadow: 7px 0px 5px 0px rgba(0, 0, 0, 0.3), inset 2px 0px 15px 0px rgba(0, 0, 0, 0.1);
+            background-color: #f27cf6; /* Changed the background color */
+        }
+
+        .card .back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 10px solid #9612eb;
+            margin: -10px 0px 0px -10px;
+            backface-visibility: visible;
+            filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, .5));
+            transform-style: preserve-3d;
+            transform-origin: 0% 50%;
+            transform: perspective(800px) rotateY(0deg);
+            transition: all 0.8s ease-in-out;
+            background-color: #f27cf6; /* Changed the background color */
+            box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+            width: 100%; /* Ensures the image fills its container */
+        }
+
+        .imgset {
+            position: relative;
+            z-index: 1;
+            margin-bottom: -215px;
+        }
+
+        .imgset img {
+            box-shadow: 0px 6px 11px 7px rgba(0, 0, 0, 0.22);
+            border-radius: 5px;
+        }
+
+        .cake {
+            width: 75px;
+            height: 150px; /* Adjust the width as needed */
+            margin: 0 auto; /* Centers the image horizontally */
+            display: block; /* Ensures proper centering */
+        }
+
+        .flower {
+            width: 300px;
+            height: 710px;
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+    <div class="back">
+        <!-- Add flowers -->
+        <img class="flower" src="https://www.blacktulipflowers.com/wp-content/uploads/2023/01/Purple-Royalty-5.jpg">
+    </div>
+    <div class="front">
+        <div class="imgset">
+            <img width="100%" src="https://1.bp.blogspot.com/-Mgj9-rbs65E/XfMoPSD5gtI/AAAAAAAAURk/NBokE2gSS2cTSJ2em5lZ5hJDuTtRN7UVwCLcBGAsYHQ/s1600/2713997.png">
+        </div>
+    </div>
+    <div class="text-container">
+        <p id="head">Happiest Birthday! <br> Harshitha</p>
+        <img class="cake" src="https://t4.ftcdn.net/jpg/05/60/56/11/360_F_560561125_zSy1VnDYeCKLXHjRs4BB5WI8FAFIU02e.jpg">
+        <p>I hope your special day will bring you lots of happiness, love, and fun. You deserve them a lot. Enjoy!</p>
+        <p>Hope this year gives a lots milestones and happiness!</p>
+    </div>
+</div>
+</body>
+</html>
+
